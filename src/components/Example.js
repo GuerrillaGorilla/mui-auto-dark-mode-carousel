@@ -19,6 +19,11 @@ function Example(props)
         },
         {
             name: "Random Name #3",
+            description: "No sign of intelligent life",
+            background: "#FF00FF"
+        },
+        {
+            name: "Random Name #4",
             description: "Idiots everywhere",
             background: "#FF0000"
         }
