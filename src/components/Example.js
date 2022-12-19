@@ -8,24 +8,31 @@ function Example(props)
     const theme = useTheme();
     var items = [
         {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!",
-            background: "#0000FF"
+            name: "Geo Intelligence",
+            description: "IoT + AI + Data providing pin point geo intelligence anywhere in the world. Hello world.",
+            bgimage: "static/worldnetwork.png",
+            bgposition: "bottom center",
+            bgsize: "cover",
+            bgattach: "local",
+            background: "#CCCCCC"
         },
         {
-            name: "Random Name #2",
-            description: "Hello World!",
+            name: "Vertical Solutions",
+            description: "There's a solution for every problem.",
+            bgimage: "static/solutionsworldwide.png",
+            bgposition: "center center",
+            bgsize: "cover",
+            bgattach: "local",
+            background: "#6EEEFF"
+        },
+        {
+            name: "Cloud Native IoT + AI + Geo Data",
+            description: "The power of synergistic data applications",
+            bgimage: "static/geobackgroundtest.png",
+            bgposition: "center center",
+            bgsize: "cover",
+            bgattach: "local",
             background: "#00FF00"
-        },
-        {
-            name: "Random Name #3",
-            description: "No sign of intelligent life",
-            background: "#FF00FF"
-        },
-        {
-            name: "Random Name #4",
-            description: "Idiots everywhere",
-            background: "#FF0000"
         }
     ]
 
@@ -58,9 +65,17 @@ function Example(props)
 function Item(props)
 {
     return (
-        <Box sx={{ bgcolor: props.item.background, height: '50vh', width: '100%', p: '3.5rem' }}>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
+        <Box sx={{ bgcolor: props.item.background,
+            backgroundImage: `url('${props.item.bgimage}')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: `${props.item.bgposition}`,
+            backgroundSize: `${props.item.bgsize}`,
+            backgroundAttachment: `${props.item.bgattach}`,
+            height: '50vh',
+            width: '100%',
+            p: '3.5rem' }}>
+            <h2 style={{ textShadow: '1.5px 1.5px 3px rgba(0, 0, 0, 0.5)' }} >{props.item.name}</h2>
+            <p style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.6)' }} >{props.item.description}</p>
 
             <Button className="CheckButton" variant="contained">
                 Check it out!
